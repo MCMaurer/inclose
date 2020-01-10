@@ -3,7 +3,7 @@ Type: Package
 Title: Making %in% close enough
 Version: 0.1.0
 Author: Michael Culshaw-Maurer
-Maintainer: The package maintainer <yourself@somewhere.net>
+Maintainer: mjculshawmaurer@ucdavis.edu
 Description: By default, R's %in% functions similar to identical(), meaning it requires exact matches, compared to all.equal(), which allows for equality within machine tolerance.
     This package overrides %in% to make it similar to all.equal(), using machine tolerance by default, and rewrites R's default %in% to a new function called %idin%, which stands for "identical in".
 License: MIT + file LICENSE
