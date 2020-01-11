@@ -9,7 +9,7 @@ x[x %in% y]
 
 By default, R will not return 2.4 here, which can be a bit of a surprise!
 
-Some users may be familiar with `identical()`'s partner in crime, `all.equal()`, which takes into account equality with some small tolerance, set to R's machine precision by default. However, there is no easy equivalent partner in crime to the `%in%` function!
+Some users may be familiar with `identical()`'s partner in crime, `all.equal()`, which takes into account equality with some small tolerance, set to the square root of R's machine precision by default. However, there is no easy equivalent partner in crime to the `%in%` function!
 
 Since the default behavior is quite likely surprising to most users, the `inclose` package overwrites R's default `%in%` with an equivalent function that acts similarly to `all.equal()`, while rewriting R's default `%in%` to a function called `%idin%`, which stands for `identical in`.
 
