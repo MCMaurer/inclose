@@ -4,7 +4,7 @@
 #' @param y: vector you're looking for matches in
 #'
 #'
-#' @return A logical vector
+#' @return A logical vector of length x
 #' @export
 #'
 #' @examples

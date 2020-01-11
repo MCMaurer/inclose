@@ -4,11 +4,11 @@
 #' @param y: vector you're looking for matches in
 #'
 #'
-#' @return A logical vector
+#' @return A logical vector of length x
 #' @export
 #'
 #' @examples
 #' x <- seq(from = 1, to = 3, by = 0.1)
 #' y <- c(3, 2.4, 1.8, 1.4)
 #' x %idin% y
-`%idin%` <- function(x, table) match(x, table, nomatch = 0) > 0
+`%idin%` <- function(x, y) match(x, y, nomatch = 0) > 0
