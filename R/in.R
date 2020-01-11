@@ -5,7 +5,7 @@
 #' @export
 #' @param x a vector whose values are being evaluated for matches in y
 #' @param y a vector whose values x is being evaluated for matches in
-#' @param tol the tolerance for differences between values of x and y to still be considered a match, by default set to \code{.Machine$double.eps}
+#' @param tol the tolerance for differences between values of x and y to still be considered a match, by default set to \code{sqrt(.Machine$double.eps)}
 #' @return A logical vector of length x
 #' @examples
 #' x <- seq(from = 1, to = 3, by = 0.1)

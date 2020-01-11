@@ -11,7 +11,7 @@ x \%in\% y
 
 \item{y}{a vector whose values x is being evaluated for matches in}
 
-\item{tol}{the tolerance for differences between values of x and y to still be considered a match, by default set to \code{.Machine$double.eps}}
+\item{tol}{the tolerance for differences between values of x and y to still be considered a match, by default set to \code{sqrt(.Machine$double.eps)}}
 }
 \value{
 A logical vector of length x
