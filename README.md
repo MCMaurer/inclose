@@ -19,7 +19,7 @@ Now `%in%` will work like this:
 x <- seq(from = 1, to = 3, by = 0.1)
 y <- c(3, 2.4, 1.8, 1.4)
 x[x %in% y]
-[1] 1.4 1.8 3.0
+[1] 1.4 1.8 2.4 3.0
 ```
 
 Thanks to the folks on [this Stack Overflow thread](https://stackoverflow.com/questions/33226152/match-values-with-tolerance) for getting me 95% of the way there, particularly [Pierre Lafortune](https://stackoverflow.com/users/4564247/pierre-lafortune).
