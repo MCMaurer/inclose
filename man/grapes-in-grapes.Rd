@@ -2,23 +2,26 @@
 % Please edit documentation in R/in.R
 \name{\%in\%}
 \alias{\%in\%}
-\title{replacing the %in% function with the all.equal equivalent}
+\title{replacing the \%in\% function with the all.equal equivalent}
 \usage{
 x \%in\% y
 }
 \arguments{
-\item{x:}{vector for which you're looking for matches}
+\item{x}{a vector whose values are being evaluated for matches}
 
-\item{y:}{vector you're looking for matches in}
+\item{y}{a vector whose values x is looking for matches in}
+
+\item{tol}{the tolerance for differences between values of x and y to still be considered a match}
 }
 \value{
 A logical vector of length x
 }
 \description{
-replacing the %in% function with the all.equal equivalent
+replacing the \%in\% function with the all.equal equivalent
 }
 \examples{
 x <- seq(from = 1, to = 3, by = 0.1)
 y <- c(3, 2.4, 1.8, 1.4)
 x \%in\% y
+
 }

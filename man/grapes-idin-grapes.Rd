@@ -2,20 +2,20 @@
 % Please edit documentation in R/idin.R
 \name{\%idin\%}
 \alias{\%idin\%}
-\title{this is R's original %in% function}
+\title{this is R's original \%in\% function}
 \usage{
 x \%idin\% y
 }
 \arguments{
-\item{x:}{vector for which you're looking for matches}
+\item{x}{a vector whose values are being evaluated for matches}
 
-\item{y:}{vector you're looking for matches in}
+\item{y}{a vector whose values x is looking for matches in}
 }
 \value{
 A logical vector of length x
 }
 \description{
-this is R's original %in% function
+this is R's original \%in\% function
 }
 \examples{
 x <- seq(from = 1, to = 3, by = 0.1)
