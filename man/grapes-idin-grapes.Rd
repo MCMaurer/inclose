@@ -4,7 +4,7 @@
 \alias{\%idin\%}
 \title{this is R's original %in% function}
 \usage{
-x \%idin\% table
+x \%idin\% y
 }
 \arguments{
 \item{x:}{vector for which you're looking for matches}
@@ -12,7 +12,7 @@ x \%idin\% table
 \item{y:}{vector you're looking for matches in}
 }
 \value{
-A logical vector
+A logical vector of length x
 }
 \description{
 this is R's original %in% function

@@ -12,7 +12,7 @@ x \%in\% y
 \item{y:}{vector you're looking for matches in}
 }
 \value{
-A logical vector
+A logical vector of length x
 }
 \description{
 replacing the %in% function with the all.equal equivalent
