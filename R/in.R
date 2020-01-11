@@ -1,6 +1,6 @@
 #' \%in\% with tolerance
 #'
-#' This function replaces R's default \code{\link[base]{\%in\%}} function with an \code{\link[base]{all.equal}} equivalent. It is slower than the default \code{\link[base]{\%in\%}}, but it is comparable to the speed differences between \code{\link[base]{identical}} and \code{\link[base]{all.equal}}. It takes a lefthand side (LHS) and righthand side (RHS) vector, evaluates whether each value on the LHS is found somewhere in the RHS, within the matching tolerance, and returns a logical vector of length(LHS).
+#' This function replaces R's default \code{\link[base]{\%in\%}} function with an \code{\link[base]{all.equal}} equivalent. It is slower than the default \code{\link[base]{\%in\%}}, but it is comparable to the speed differences between \code{\link[base]{identical}} and \code{\link[base]{all.equal}}. It takes a lefthand side (LHS) and righthand side (RHS) vector, evaluates whether each value on the LHS is found somewhere in the RHS, within the matching tolerance, and returns a logical vector of length(LHS). Note that this function only takes tolerance into account if both the LHS and RHS are numeric, otherwise it uses the default \code{\link[base]{\%in\%}} behavior.
 #'
 #' @export
 #' @param x a vector whose values are being evaluated for matches in y
@@ -18,9 +18,14 @@
 
 `%in%` <- function(x,y, tol = sqrt(.Machine$double.eps)) {
   if (is.numeric(x) & is.numeric(y)) {
-    out <- logical(length(x))
-    for(i in 1:length(x)) out[i] <- any(abs(x[i] - y) <= tol)
-    out
+    sort_y <-  sort(y)
+    i <-  findInterval(x, sort_y, all.inside = TRUE)
+    i2 <- i+1
+    dif1 <- abs(x - sort_y[i])
+    dif2 <- abs(x - sort_y[i2])
+    dif <- dif1 > dif2
+    dif1[dif] <- dif2[dif]
+    dif1 <= tol
   } else{
     match(x, y, nomatch = 0) > 0
   }

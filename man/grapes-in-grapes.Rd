@@ -17,7 +17,7 @@ x \%in\% y
 A logical vector of length x
 }
 \description{
-This function replaces R's default \code{\link[base]{\%in\%}} function with an \code{\link[base]{all.equal}} equivalent. It is slower than the default \code{\link[base]{\%in\%}}, but it is comparable to the speed differences between \code{\link[base]{identical}} and \code{\link[base]{all.equal}}. It takes a lefthand side (LHS) and righthand side (RHS) vector, evaluates whether each value on the LHS is found somewhere in the RHS, within the matching tolerance, and returns a logical vector of length(LHS).
+This function replaces R's default \code{\link[base]{\%in\%}} function with an \code{\link[base]{all.equal}} equivalent. It is slower than the default \code{\link[base]{\%in\%}}, but it is comparable to the speed differences between \code{\link[base]{identical}} and \code{\link[base]{all.equal}}. It takes a lefthand side (LHS) and righthand side (RHS) vector, evaluates whether each value on the LHS is found somewhere in the RHS, within the matching tolerance, and returns a logical vector of length(LHS). Note that this function only takes tolerance into account if both the LHS and RHS are numeric, otherwise it uses the default \code{\link[base]{\%in\%}} behavior.
 }
 \examples{
 x <- seq(from = 1, to = 3, by = 0.1)
