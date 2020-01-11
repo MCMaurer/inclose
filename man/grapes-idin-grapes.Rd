@@ -2,7 +2,7 @@
 % Please edit documentation in R/idin.R
 \name{\%idin\%}
 \alias{\%idin\%}
-\title{this is R's original \%in\% function}
+\title{Rewrite of R's original \%in\% function}
 \usage{
 x \%idin\% y
 }
@@ -15,10 +15,11 @@ x \%idin\% y
 A logical vector of length x
 }
 \description{
-this is R's original \%in\% function
+This is the same as R's original \code{\link[base]{\%in\%}}, but written as shorthand for "identical in".
 }
 \examples{
 x <- seq(from = 1, to = 3, by = 0.1)
 y <- c(3, 2.4, 1.8, 1.4)
 x \%idin\% y
+
 }
